@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :admins
+  resources :bookings
+  resources :storage_units
+  resources :clients
+  resources :staffs
     get '/hello', to: 'application#hello_world'
 
 end

@@ -1,0 +1,2 @@
+class StorageUnitsController < ApplicationController
+end
