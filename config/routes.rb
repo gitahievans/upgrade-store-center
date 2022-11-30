@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   resources :storage_units
   resources :clients
   resources :staffs
-    get '/hello', to: 'application#hello_world'
+  get '/me', to: 'clients#auto_login'
+  post '/login/client', to: "clients#login_client"
+  post '/login/staff', to: "staff#login_staff"
+  post '/login/admin', to: "admins#login_admin"
+  post '/login/admin', to: "admins#login_admin"
+
+  get '/hello', to: 'application#hello_world'
 
 end
