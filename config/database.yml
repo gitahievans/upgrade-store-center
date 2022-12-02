@@ -81,6 +81,9 @@ test:
 #
 production:
   <<: *default
-  database: storagecenter_production
-  username: storagecenter
-  password: <%= ENV['STORAGECENTER_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
+
+  # <<: *default
+  # database: storagecenter_production
+  # username: storagecenter
+  # password: <%= ENV['STORAGECENTER_DATABASE_PASSWORD'] %>
