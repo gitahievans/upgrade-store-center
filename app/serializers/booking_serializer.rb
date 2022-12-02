@@ -1,4 +1,3 @@
-class ClientSerializer < ActiveModel::Serializer
-  attributes :id, :username, :email, :phone_number
-  has_many :bookings
+class BookingSerializer < ActiveModel::Serializer
+  attributes :id, :starting, :ending, :goods, :pickup_status, :delivery_status 
 end
