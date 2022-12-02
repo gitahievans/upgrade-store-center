@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :staffs
   get '/me', to: 'clients#auto_login'
   post '/login/client', to: "clients#login_client"
-  post '/login/staff', to: "staff#login_staff"
+  post '/login/staff', to: "staffs#login_staff"
   post '/login/admin', to: "admins#login_admin"
   post '/login/admin', to: "admins#login_admin"
 

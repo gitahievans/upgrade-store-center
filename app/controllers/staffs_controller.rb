@@ -1,4 +1,4 @@
-class StaffController < ApplicationController
+class StaffsController < ApplicationController
 wrap_parameters format: []
     def index 
         staff = Staff.all
