@@ -15,6 +15,7 @@ class StorageUnitsController < ApplicationController
     end
 
     def create
+        # byebug
         staff = Staff.find(session[:staff_id])
         storage_unit = staff.storage_units.create!(storage_params)
         render json: storage_unit, status: :created
@@ -36,7 +37,7 @@ class StorageUnitsController < ApplicationController
     private
     
     def storage_params
-        params.permit(:name, :size, :price, :image_url, :staff_id, :status)
+        params.permit(:unit_number, :size, :price, :image_url, :staff_id, :availability)
     end
 
     def render_not_found_response

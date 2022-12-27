@@ -44,7 +44,7 @@ wrap_parameters format: []
     private
 
     def booking_params
-        params.permit(:start, :end, :client_id, :storage_unit_id, :goods, :pickup_status, :delivery_status)
+        params.permit(:starting, :ending, :client_id, :storage_unit_id, :goods, :pickup_status, :delivery_status)
     end
 
     def render_not_found_response 
@@ -52,7 +52,7 @@ wrap_parameters format: []
     end
 
     def find_unit
-        Booking.find(params[:id])
+        Booking.find_by(params[:booking_id])
     end
 
 end

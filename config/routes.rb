@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   post '/login/admin', to: "admins#login_admin"
   post '/login/admin', to: "admins#login_admin"
 
+  post '/admin/storage_units', to: 'storage_units#create'
+
   get '/hello', to: 'application#hello_world'
 
 end
